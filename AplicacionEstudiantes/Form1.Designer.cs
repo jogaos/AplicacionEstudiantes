@@ -36,6 +36,12 @@
             this.lblError = new System.Windows.Forms.Label();
             this.lblErrorCarnet = new System.Windows.Forms.Label();
             this.lblErrorNombre = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnuEstudiantes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNotas = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnListado = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCarnet
@@ -81,7 +87,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGuardar.Location = new System.Drawing.Point(305, 299);
+            this.btnGuardar.Location = new System.Drawing.Point(156, 294);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(120, 37);
             this.btnGuardar.TabIndex = 4;
@@ -125,11 +131,57 @@
             this.lblErrorNombre.Text = "label2";
             this.lblErrorNombre.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuEstudiantes,
+            this.mnuSalir});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(502, 28);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mnuEstudiantes
+            // 
+            this.mnuEstudiantes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuNotas});
+            this.mnuEstudiantes.Name = "mnuEstudiantes";
+            this.mnuEstudiantes.Size = new System.Drawing.Size(98, 24);
+            this.mnuEstudiantes.Text = "Estudiantes";
+            // 
+            // mnuNotas
+            // 
+            this.mnuNotas.Name = "mnuNotas";
+            this.mnuNotas.Size = new System.Drawing.Size(131, 26);
+            this.mnuNotas.Text = "Notas";
+            this.mnuNotas.Click += new System.EventHandler(this.mnuNotas_Click);
+            // 
+            // mnuSalir
+            // 
+            this.mnuSalir.Name = "mnuSalir";
+            this.mnuSalir.Size = new System.Drawing.Size(52, 24);
+            this.mnuSalir.Text = "Salir";
+            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
+            // 
+            // btnListado
+            // 
+            this.btnListado.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnListado.Location = new System.Drawing.Point(292, 294);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(133, 37);
+            this.btnListado.TabIndex = 9;
+            this.btnListado.Text = "Ver listado";
+            this.btnListado.UseVisualStyleBackColor = true;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 359);
+            this.Controls.Add(this.btnListado);
             this.Controls.Add(this.lblErrorNombre);
             this.Controls.Add(this.lblErrorCarnet);
             this.Controls.Add(this.lblError);
@@ -138,8 +190,12 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtCarnet);
             this.Controls.Add(this.lblCarnet);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Aplicación de estudiante";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +211,10 @@
         private Label lblError;
         private Label lblErrorCarnet;
         private Label lblErrorNombre;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnuEstudiantes;
+        private ToolStripMenuItem mnuNotas;
+        private Button btnListado;
+        private ToolStripMenuItem mnuSalir;
     }
 }
